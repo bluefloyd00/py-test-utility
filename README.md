@@ -27,9 +27,10 @@ csv
 - path and file name of the csv
 - mandatory
 - nested fields shall be separated by a dot "."  (i.e. student.id, student.name)
+
 |order | item.id | item.quantity | delivery.address | delivey.postcode |
 |---|---|---|---|---|
-| A0001 | item1 | 5  | address1 | e13bp |
+| A0001 | item1 | 5 | address1 | e13bp |
 | | item2 | 1 | | |
 | | item3 | 3 | | |
 | A0002 | item4 | 4  | address4 | e13bp |
