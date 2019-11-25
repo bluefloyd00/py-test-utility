@@ -1,0 +1,17 @@
+[
+    {
+        "mode": "NULLABLE", 
+        "name": "field1", 
+        "type": "STRING"
+    }, 
+    {
+        "mode": "NULLABLE", 
+        "name": "field2", 
+        "type": "STRING"
+    }, 
+    {
+        "mode": "NULLABLE", 
+        "name": "field3", 
+        "type": "INTEGER"
+    }
+]

@@ -1,0 +1,225 @@
+[
+    {
+      "mode": "NULLABLE", 
+      "name": "order_reference", 
+      "type": "STRING"
+    }, 
+    {
+      "mode": "NULLABLE", 
+      "name": "sale_order_type", 
+      "type": "STRING"
+    }, 
+    {
+      "mode": "NULLABLE", 
+      "name": "eventstore_timestamp", 
+      "type": "TIMESTAMP"
+    }, 
+    {
+      "mode": "NULLABLE", 
+      "name": "store_code", 
+      "type": "STRING"
+    }, 
+    {
+      "mode": "NULLABLE", 
+      "name": "currency", 
+      "type": "STRING"
+    }, 
+    {
+      "mode": "NULLABLE", 
+      "name": "order_placement_time", 
+      "type": "TIMESTAMP"
+    }, 
+    {
+      "fields": [
+        {
+          "mode": "NULLABLE", 
+          "name": "hashed_email", 
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE", 
+          "name": "postcode", 
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE", 
+          "name": "country", 
+          "type": "STRING"
+        }
+      ], 
+      "mode": "NULLABLE", 
+      "name": "contact_information", 
+      "type": "RECORD"
+    }, 
+    {
+      "fields": [
+        {
+          "mode": "NULLABLE", 
+          "name": "postcode", 
+          "type": "STRING"
+        }, 
+        {
+          "mode": "NULLABLE", 
+          "name": "country", 
+          "type": "STRING"
+        }
+      ], 
+      "mode": "NULLABLE", 
+      "name": "billing_address", 
+      "type": "RECORD"
+    }, 
+    {
+      "fields": [
+        {
+          "fields": [
+            {
+              "mode": "NULLABLE", 
+              "name": "qty", 
+              "type": "INTEGER"
+            }, 
+            {
+              "mode": "NULLABLE", 
+              "name": "order_item_id", 
+              "type": "INTEGER"
+            }, 
+            {
+              "mode": "NULLABLE", 
+              "name": "sku", 
+              "type": "STRING"
+            }
+          ], 
+          "mode": "REPEATED", 
+          "name": "products", 
+          "type": "RECORD"
+        },
+        {
+          "fields": [
+            {
+              "mode": "NULLABLE", 
+              "name": "country", 
+              "type": "STRING"
+            }, 
+            {
+              "mode": "NULLABLE", 
+              "name": "postcode", 
+              "type": "STRING"
+            }
+          ], 
+          "mode": "REPEATED", 
+          "name": "collection_point", 
+          "type": "RECORD"
+        }, 
+        {
+          "mode": "NULLABLE", 
+          "name": "promised_date", 
+          "type": "TIMESTAMP"
+        }, 
+        {
+          "mode": "NULLABLE", 
+          "name": "carrier", 
+          "type": "STRING"
+        }, 
+        {
+          "mode": "NULLABLE", 
+          "name": "service", 
+          "type": "STRING"
+        }, 
+        {
+          "mode": "NULLABLE", 
+          "name": "id", 
+          "type": "INTEGER"
+        }
+      ], 
+      "mode": "REPEATED", 
+      "name": "deliveries", 
+      "type": "RECORD"
+    }, 
+    {
+      "fields": [
+        {
+          "fields": [
+            {
+              "mode": "NULLABLE", 
+              "name": "code", 
+              "type": "STRING"
+            },
+            {
+              "mode": "NULLABLE", 
+              "name": "type", 
+              "type": "STRING"
+            },
+            {
+              "mode": "NULLABLE", 
+              "name": "category", 
+              "type": "STRING"
+            }
+          ], 
+          "mode": "NULLABLE", 
+          "name": "coupon", 
+          "type": "RECORD"
+        }, 
+        {
+          "fields": [
+            {
+              "mode": "NULLABLE", 
+              "name": "inc", 
+              "type": "INTEGER"
+            }, 
+            {
+              "mode": "NULLABLE", 
+              "name": "ex", 
+              "type": "INTEGER"
+            }
+          ], 
+          "mode": "NULLABLE", 
+          "name": "list_price", 
+          "type": "RECORD"
+        }, 
+        {
+          "fields": [
+            {
+              "mode": "NULLABLE", 
+              "name": "inc", 
+              "type": "INTEGER"
+            }, 
+            {
+              "mode": "NULLABLE", 
+              "name": "ex", 
+              "type": "INTEGER"
+            }
+          ], 
+          "mode": "NULLABLE", 
+          "name": "unit_price", 
+          "type": "RECORD"
+        }, 
+        {
+          "mode": "NULLABLE", 
+          "name": "qty", 
+          "type": "INTEGER"
+        }, 
+        {
+          "mode": "NULLABLE", 
+          "name": "sku", 
+          "type": "STRING"
+        }, 
+        {
+          "mode": "NULLABLE", 
+          "name": "type", 
+          "type": "STRING"
+        }, 
+        {
+          "mode": "NULLABLE", 
+          "name": "delivery_id", 
+          "type": "STRING"
+        }, 
+        {
+          "mode": "NULLABLE", 
+          "name": "delivered_sku", 
+          "type": "STRING"
+        }
+      ], 
+      "mode": "REPEATED", 
+      "name": "charges", 
+      "type": "RECORD"
+    }
+  ]
