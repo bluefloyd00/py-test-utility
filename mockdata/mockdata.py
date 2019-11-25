@@ -15,12 +15,12 @@ class from_csv():
         df = df.where(pd.notnull(df), None)
         return fx.extract_list_dictionary(df, record_list)
 
-if __name__ == "__main__":
-    file_name = input("please insert the csv File Name: ")
-    schema_file_name = input("please insert the schema File Name: ")
-    output_json = input("please insert the json output File Name: ")
-    f= open(output_json,"w+")
-    csv_file = from_csv(file_name, schema_file_name)
-    extracted_json = csv_file.to_json()
-    f.write(json.dumps(extracted_json))
-    print(json.dumps(extracted_json, indent=4))
+# if __name__ == "__main__":
+#     file_name = input("please insert the csv File Name: ")
+#     schema_file_name = input("please insert the schema File Name: ")
+#     output_json = input("please insert the json output File Name: ")
+#     f= open(output_json,"w+")
+#     csv_file = from_csv(file_name, schema_file_name)
+#     extracted_json = csv_file.to_json()
+#     f.write(json.dumps(extracted_json))
+#     print(json.dumps(extracted_json, indent=4))

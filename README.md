@@ -14,6 +14,14 @@ git clone --recurse-submodules https://github.com/bluefloyd00/py-test-utility
 cd py-test-utility
 pip install -U .
 ```
+## Dependencies
+
+| Packages |
+|---|
+| pandas |
+| types |
+| json |
+| csv |
 
 ## mockdata module
 
