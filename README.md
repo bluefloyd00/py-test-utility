@@ -9,7 +9,7 @@ py-test-utility can be installed via pip
 pip install py-test-utility
 ```
 Or from the source code on GitHub.
-```python
+```command line
 git clone --recurse-submodules https://github.com/bluefloyd00/py-test-utility
 cd py-test-utility
 pip install -U .
@@ -19,16 +19,25 @@ pip install -U .
 
 ### Class: from_csv(csv, schema) 
 
-Takes in inpute csv file, table schema file and extract the json file, the csv can have nested fields and repeated nested records (return nested fields)
+Takes in inpute csv file, table schema file and return the equivalent json file from the csv - the csv can have nested fields and repeated nested records.
 
-#### init - parameters
+#### Parameters
 
-CSV
+csv
 - path and file name of the csv
 - mandatory
 - nested fields shall be separated by a dot "."  (i.e. student.id, student.name)
 
-SCHEMA 
+```csv
+order,item.id,item.quantity,delivery.address,delivey.postcode
+A0001,item1,5,address1,e13bp
+,item2,1,,
+,item3,3,,
+A0002,item4,4,address4,e13bp
+,item1,4,,
+,item3,2,,
+```
+schema 
 - path and schema file name of the table schema
 - required if the CSV contain nested and repeated records
 - json format i.e. 
@@ -57,12 +66,13 @@ SCHEMA
 
 ### Usage
 
-After inslling
-
 #### example
 ```python 
 
 import mockdata.mockdata as md
-csv_mockdata = md.from_csv("mockdata/test/data/csv/repeated_records.csv", "mockdata/test/schema/repeated_records_schema.json")
-        result = obj.to_json()
+# initialise the object 
+mockdata_csv = md.from_csv( "mockdata/test/data/csv/repeated_records.csv", 
+                            "mockdata/test/schema/repeated_records_schema.json")
+                            
+result = mockdata_csv.to_json()
 ```
