@@ -11,7 +11,6 @@ class from_csv():
     
     def to_json(self):
         record_list = fx.extract_repeated_records(self.schema_file)
-        # print(" ******************* {} ************************".format(record_list))
         df = pd.read_csv(self.file_name)
         df = df.where(pd.notnull(df), None)
         return fx.extract_list_dictionary(df, record_list)
