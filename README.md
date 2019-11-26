@@ -15,7 +15,7 @@ pip install py-test-utility
 - csv
     - path and file name of the csv
     - mandatory
-    - nested fields shall be separated by a dot "."  (i.e. student.id, student.name)
+    - nested fields shall be separated by a dot "."  (i.e. item.id, item.quantity)
 
 |order | item.id | item.quantity | delivery.address | delivey.postcode |
 |---|---|---|---|---|
