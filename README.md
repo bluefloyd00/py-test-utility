@@ -13,9 +13,9 @@ pip install py-test-utility
 ### Args
 
 - csv
--- path and file name of the csv
--- mandatory
--- nested fields shall be separated by a dot "."  (i.e. student.id, student.name)
+    - path and file name of the csv
+    - mandatory
+    - nested fields shall be separated by a dot "."  (i.e. student.id, student.name)
 
 |order | item.id | item.quantity | delivery.address | delivey.postcode |
 |---|---|---|---|---|
@@ -27,9 +27,9 @@ pip install py-test-utility
 | | item3 | 2 | | |
 
 - schema 
--- path and schema file name of the table schema
--- required if the CSV contain nested and repeated records
--- json format i.e. 
+    - path and schema file name of the table schema
+    - required if the CSV contain nested and repeated records
+    - json format i.e. 
 ```json
 [
     {
@@ -52,7 +52,7 @@ pip install py-test-utility
 
 ### Methods
 - to_json()
--- if successfuls return the json extracted from the csv
+    - if successfuls return the json extracted from the csv
 
 
 ### Usage
