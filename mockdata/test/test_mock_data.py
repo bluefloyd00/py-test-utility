@@ -164,13 +164,13 @@ class test_functions(unittest.TestCase):
 class test_mockdata(unittest.TestCase):
 
     def test_class_csv_from(self):
-        obj = md.from_csv("mockdata/test/data/csv/simple.csv", "mockdata/test/schema/simple_schema.json")
+        obj = md.csv_mock("mockdata/test/data/csv/simple.csv", "mockdata/test/schema/simple_schema.json")
         result = obj.to_json()
         with open("mockdata/test/data/json/simple.json", "r") as expected_file:
             expected = json.load(expected_file)
         self.assertCountEqual(result, expected, "to_json simple test")
 
-        obj = md.from_csv("mockdata/test/data/csv/repeated_records.csv", "mockdata/test/schema/repeated_records_schema.json")
+        obj = md.csv_mock("mockdata/test/data/csv/repeated_records.csv", "mockdata/test/schema/repeated_records_schema.json")
         result = obj.to_json()
         with open("mockdata/test/data/json/repeated_records.json", "r") as expected_file:
             expected = json.load(expected_file)

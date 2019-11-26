@@ -2,28 +2,23 @@
 
 Contains a collection of class and functions which aim to help deelopers in implementing and testing data pipelines against the new generation data warehouses and storing system i.e. BigQuery and GCS
 
-## Installing
+## Installation
 py-test-utility can be installed via pip
 
 ```python 
 pip install py-test-utility
 ```
-Or from the source code on GitHub.
-```command line
-git clone --recurse-submodules https://github.com/bluefloyd00/py-test-utility
-cd py-test-utility
-pip install -U .
+
+## Usage
+
+```python 
+import mockdata.mockdata as md
+
+md.from_csv( "mockdata/test/data/csv/repeated_records.csv", 
+                            "mockdata/test/schema/repeated_records_schema.json") # initialise the object
+                            
+result = mockdata_csv.to_json() # return the equivalent json
 ```
-## Dependencies
-
-| Packages |
-|---|
-| pandas |
-| types |
-| json |
-| csv |
-
-## mockdata module
 
 ### Class: from_csv(csv, schema) 
 
@@ -74,13 +69,4 @@ schema
 
 ### Usage
 
-#### example
-```python 
 
-import mockdata.mockdata as md
-# initialise the object 
-mockdata_csv = md.from_csv( "mockdata/test/data/csv/repeated_records.csv", 
-                            "mockdata/test/schema/repeated_records_schema.json")
-                            
-result = mockdata_csv.to_json()
-```
