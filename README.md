@@ -31,23 +31,47 @@ pip install py-test-utility
     - required if the CSV contain nested and repeated records
     - json format i.e. 
 ```json
-[
+[  
     {
-        "mode": "NULLABLE", 
-        "name": "field1", 
-        "type": "STRING"
+      "mode": "NULLABLE", 
+      "name": "order", 
+      "type": "STRING"
+    },  
+    {
+      "fields": [
+        {
+          "mode": "NULLABLE", 
+          "name": "id", 
+          "type": "STRING"
+        },
+        {
+          "mode": "NULLABLE", 
+          "name": "quantity", 
+          "type": "STRING"
+        }
+      ], 
+      "mode": "REPEATED", 
+      "name": "item", 
+      "type": "RECORD"
     }, 
     {
-        "mode": "NULLABLE", 
-        "name": "field2", 
-        "type": "STRING"
-    }, 
-    {
-        "mode": "NULLABLE", 
-        "name": "field3", 
-        "type": "INTEGER"
+      "fields": [
+        {
+          "mode": "NULLABLE", 
+          "name": "address", 
+          "type": "STRING"
+        }, 
+        {
+          "mode": "NULLABLE", 
+          "name": "postcode", 
+          "type": "STRING"
+        }
+      ], 
+      "mode": "NULLABLE", 
+      "name": "delivery", 
+      "type": "RECORD"
     }
-]
+  ]
 ```
 
 ### Methods
