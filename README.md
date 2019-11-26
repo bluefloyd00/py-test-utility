@@ -1,6 +1,6 @@
 # py-test-utility 
 
-Contains a collection of class and functions which aim to help deelopers in implementing and testing data pipelines against the new generation data warehouses and storing system i.e. BigQuery and GCS
+Contains a collection of class and functions which aim to help developers implement and test data pipelines against the new generation data warehouses and storing system i.e. BigQuery and GCS
 
 ## Installation
 py-test-utility can be installed via pip
@@ -8,28 +8,14 @@ py-test-utility can be installed via pip
 ```python 
 pip install py-test-utility
 ```
+## mockdata - class csv_mock(csv,schema) 
 
-## Usage
+### Args
 
-```python 
-import mockdata.mockdata as md
-
-md.from_csv( "mockdata/test/data/csv/repeated_records.csv", 
-                            "mockdata/test/schema/repeated_records_schema.json") # initialise the object
-                            
-result = mockdata_csv.to_json() # return the equivalent json
-```
-
-### Class: from_csv(csv, schema) 
-
-Takes in inpute csv file, table schema file and return the equivalent json file from the csv - the csv can have nested fields and repeated nested records.
-
-#### Parameters
-
-csv
-- path and file name of the csv
-- mandatory
-- nested fields shall be separated by a dot "."  (i.e. student.id, student.name)
+- csv
+-- path and file name of the csv
+-- mandatory
+-- nested fields shall be separated by a dot "."  (i.e. student.id, student.name)
 
 |order | item.id | item.quantity | delivery.address | delivey.postcode |
 |---|---|---|---|---|
@@ -40,10 +26,10 @@ csv
 | | item1 | 4 | | |
 | | item3 | 2 | | |
 
-schema 
-- path and schema file name of the table schema
-- required if the CSV contain nested and repeated records
-- json format i.e. 
+- schema 
+-- path and schema file name of the table schema
+-- required if the CSV contain nested and repeated records
+-- json format i.e. 
 ```json
 [
     {
@@ -64,9 +50,20 @@ schema
 ]
 ```
 
-#### method to_json()
-- if successful return the json extracted from the csv
+### Methods
+- to_json()
+-- if successfuls return the json extracted from the csv
+
 
 ### Usage
 
+```python 
+import mockdata.mockdata as md
+
+md.from_csv(
+    csv="mockdata/test/data/csv/repeated_records.csv", 
+    schema="mockdata/test/schema/repeated_records_schema.json") # initialise the object
+                            
+result = mockdata_csv.to_json() # return the equivalent json
+```
 
