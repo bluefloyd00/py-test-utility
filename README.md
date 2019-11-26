@@ -58,12 +58,10 @@ pip install py-test-utility
 ### Usage
 
 ```python 
-import mockdata.mockdata as md
-
-md.from_csv(
-    csv="mockdata/test/data/csv/repeated_records.csv", 
-    schema="mockdata/test/schema/repeated_records_schema.json") # initialise the object
-                            
-result = mockdata_csv.to_json() # return the equivalent json
+>>> from mockdata import mockdata as md
+>>> mockdata_csv = md.csv_mock(
+...     csv="mockdata/test/data/csv/repeated_records.csv", 
+...     schema="mockdata/test/schema/repeated_records_schema.json") # initialise the object
+>>> mockdata_json = mockdata_csv.to_json() # return the equivalent json
 ```
 
