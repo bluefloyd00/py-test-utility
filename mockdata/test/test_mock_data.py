@@ -176,6 +176,14 @@ class test_mockdata(unittest.TestCase):
             expected = json.load(expected_file)
         self.assertEqual(result, expected, "to_json repeated records")
 
+        obj = md.csv_mock("mockdata/test/data/csv/simple.csv")
+        result = obj.to_json()
+        with open("mockdata/test/data/json/simple.json", "r") as expected_file:
+            expected = json.load(expected_file)
+        self.assertEqual(result, expected, "to_json no schema")
+
+
+
 
 if __name__ == "__main__":
     unittest.main()
