@@ -4,8 +4,8 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="0.0.2",
-    version=get_git_version(),
+    name="py-test-utility",
+    version="0.0.2",
     author="Simone Fiorentini",
     author_email="simone.fiorentini@gmail.com",
     description="useful package for pipelines testing and data mocking for new generation data warehouse",
