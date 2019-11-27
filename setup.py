@@ -1,11 +1,12 @@
 import setuptools
+from version import get_git_version
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
     name="py-test-utility",
-    version="0.0.1",
+    version=get_git_version(),
     author="Simone Fiorentini",
     author_email="simone.fiorentini@gmail.com",
     description="useful package for pipelines testing and data mocking for new generation data warehouse",
