@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="py-test-utility",
+    name="0.0.2",
     version=get_git_version(),
     author="Simone Fiorentini",
     author_email="simone.fiorentini@gmail.com",
