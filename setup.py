@@ -1,5 +1,4 @@
 import setuptools
-from version import get_git_version
 
 with open("README.md", "r") as fh:
     long_description = fh.read()
