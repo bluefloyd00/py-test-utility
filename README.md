@@ -9,6 +9,7 @@ py-test-utility can be installed via pip
 pip install py-test-utility
 ```
 ## mockdata - class csv_mock(csv,schema) 
+Extract the equivalent json from csv with nested and repeated records structures
 
 ### Args
 
